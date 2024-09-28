@@ -1,5 +1,5 @@
 <template>
-    <div class="px-4">
+    <div class="px-4 lg:px-20">
         <AppMenu />
     </div>
 </template>

@@ -35,11 +35,36 @@
             <div class="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
                 <!-- Resume button -->
                 <button
+                    data-tooltip-target="tooltip-bottom"
+                    data-tooltip-placement="bottom"
                     type="button"
-                    class="hidden rounded-lg bg-black px-4 py-2 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 md:inline-block"
+                    class="group hidden rounded-lg bg-black p-3 text-white transition-colors hover:bg-neutral focus:border-2 focus:border-black focus:bg-white focus:text-black focus:outline-none md:flex lg:px-5 lg:py-4"
                 >
-                    Resume
+                    <span class="hidden lg:inline-block">Resume</span>
+                    <svg
+                        class="stroke-white group-focus:stroke-black lg:ml-2"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M17.5 12.5V13.5C17.5 14.9001 17.5 15.6002 17.2275 16.135C16.9878 16.6054 16.6054 16.9878 16.135 17.2275C15.6002 17.5 14.9001 17.5 13.5 17.5H6.5C5.09987 17.5 4.3998 17.5 3.86502 17.2275C3.39462 16.9878 3.01217 16.6054 2.77248 16.135C2.5 15.6002 2.5 14.9001 2.5 13.5V12.5M14.1667 8.33333L10 12.5M10 12.5L5.83333 8.33333M10 12.5V2.5"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        />
+                    </svg>
                 </button>
+                <div
+                    id="tooltip-bottom"
+                    role="tooltip"
+                    class="tooltip invisible absolute z-10 inline-block rounded-lg bg-black px-3 py-2 text-sm font-medium text-white opacity-0 shadow-sm transition-opacity duration-300"
+                >
+                    Download resume
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
                 <!-- Dropdown button -->
                 <button
                     data-collapse-toggle="navbar-cta"
@@ -71,33 +96,33 @@
                 id="navbar-cta"
             >
                 <ul
-                    class="mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse"
+                    class="mt-4 flex flex-col transition-colors md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse"
                 >
                     <li>
                         <a
                             href="#"
-                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:bg-gray-100"
+                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
                             >About Me</a
                         >
                     </li>
                     <li>
                         <a
                             href="#"
-                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:bg-gray-100"
+                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
                             >Skills</a
                         >
                     </li>
                     <li>
                         <a
                             href="#"
-                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:bg-gray-100"
+                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
                             >Project</a
                         >
                     </li>
                     <li>
                         <a
                             href="#"
-                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:bg-gray-100"
+                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
                             >Contact Me</a
                         >
                     </li>
