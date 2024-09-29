@@ -96,7 +96,7 @@
                 id="navbar-cta"
             >
                 <ul
-                    class="mt-4 flex flex-col transition-colors md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse"
+                    class="mt-4 flex flex-col transition-colors md:mt-0 md:flex-row md:space-x-2 md:border-0 md:p-0 lg:space-x-8 rtl:space-x-reverse"
                 >
                     <li>
                         <a

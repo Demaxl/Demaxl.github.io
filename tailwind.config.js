@@ -7,13 +7,14 @@ export default {
         './node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx}'
     ],
     theme: {
-        colors: {
-            neutral: '#404040'
-        },
         fontFamily: {
             sans: ['Sora', 'sans-serif']
         },
-        extend: {}
+        extend: {
+            colors: {
+                neutral: '#404040'
+            }
+        }
     },
     plugins: [require('flowbite/plugin')]
 }
