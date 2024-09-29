@@ -1,9 +1,11 @@
 <template>
-    <div class="px-4 lg:px-20">
-        <AppMenu />
+    <div class="space-y-10 px-4 md:space-y-[60px] lg:px-20">
+        <AppMenu id="menu" />
+        <HeroSection id="hero" />
     </div>
 </template>
 
 <script setup>
 import AppMenu from './components/AppMenu.vue'
+import HeroSection from './sections/HeroSection.vue'
 </script>
