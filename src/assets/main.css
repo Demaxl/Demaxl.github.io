@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 @layer utilities {
-    @layer utilities {
-        .text-outline {
-            -webkit-text-stroke: 1.4px black;
-            -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-        }
+    .text-outline {
+        -webkit-text-stroke: 1.4px black;
+        -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    }
+
+    .fill-path-black {
+        fill: black !important;
+    }
+    .fill-path-white {
+        fill: white !important;
     }
 }
