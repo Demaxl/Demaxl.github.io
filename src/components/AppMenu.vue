@@ -35,7 +35,7 @@
             <div class="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
                 <!-- Resume button -->
                 <button
-                    data-tooltip-target="tooltip-bottom"
+                    data-tooltip-target="tooltip-resume-btn"
                     data-tooltip-placement="bottom"
                     type="button"
                     class="group hidden rounded-lg bg-black p-3 text-white transition-colors hover:bg-neutral focus:border-2 focus:border-black focus:bg-white focus:text-black focus:outline-none md:flex lg:px-5 lg:py-4"
@@ -65,6 +65,7 @@
                     Download resume
                     <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
+                <VToolTip content="Download resume" id="tooltip-resume-btn" />
                 <!-- Dropdown button -->
                 <button
                     data-collapse-toggle="navbar-cta"
@@ -100,7 +101,7 @@
                 >
                     <li>
                         <a
-                            href="#"
+                            href="#hero"
                             class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
                             >About Me</a
                         >
@@ -156,3 +157,7 @@
         </div>
     </nav>
 </template>
+
+<script setup>
+import VToolTip from '@/components/VToolTip.vue'
+</script>
