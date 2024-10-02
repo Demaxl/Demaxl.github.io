@@ -1,9 +1,13 @@
 <template>
-    <div class="dark-section py-10">
+    <div class="dark-section py-10 lg:py-20">
         <h1 class="section-heading text-white"><span>My</span> <span>Experience</span></h1>
-        <div>
-            <div class="rounded-[10px] border border-zinc-500 px-6 py-[30px]">
-                <div class="mb-7 flex flex-col space-y-[30px]">
+        <div class="mb-5">
+            <div
+                class="rounded-[10px] border border-zinc-500 px-6 py-[30px] transition-colors hover:border-zinc-800 hover:bg-zinc-800"
+            >
+                <div
+                    class="mb-7 flex flex-col space-y-[30px] md:flex-row md:items-center md:justify-between md:space-y-0"
+                >
                     <div class="flex space-x-[30px]">
                         <a href="https://www.freelancer.com/u/demaxl" target="_blank">
                             <FreelancerIcon
@@ -16,7 +20,9 @@
                                 class="bg-white !text-black"
                             />
                         </a>
-                        <h2 class="text-xl font-semibold leading-6 tracking-tight text-white">
+                        <h2
+                            class="text-xl font-semibold leading-6 tracking-tight text-white lg:text-2xl lg:leading-7"
+                        >
                             Freelance Software Engineer
                         </h2>
                     </div>
