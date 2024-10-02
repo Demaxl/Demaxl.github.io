@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .section-heading {
+        @apply mb-10 text-center text-[28px] leading-8 tracking-tight lg:mb-20 lg:text-5xl lg:leading-[56px];
+    }
+
+    .section-heading > span:last-child {
+        @apply ml-4 font-extrabold;
+    }
+}
+
 @layer utilities {
     .text-outline {
         -webkit-text-stroke: 1.4px black;
@@ -13,5 +23,9 @@
     }
     .fill-path-white {
         @apply fill-white;
+    }
+
+    .dark-section {
+        @apply -mx-4 bg-black px-4 sm:-mx-14 sm:px-14 lg:-mx-20 lg:px-20;
     }
 }
