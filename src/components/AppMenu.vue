@@ -101,13 +101,6 @@
                 >
                     <li>
                         <a
-                            href="#hero"
-                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
-                            >About Me</a
-                        >
-                    </li>
-                    <li>
-                        <a
                             href="#skills"
                             class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
                             >Skills</a
@@ -115,9 +108,16 @@
                     </li>
                     <li>
                         <a
+                            href="#experience"
+                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
+                            >Experience</a
+                        >
+                    </li>
+                    <li>
+                        <a
                             href="#"
                             class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
-                            >Project</a
+                            >Projects</a
                         >
                     </li>
                     <li>
