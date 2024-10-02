@@ -9,7 +9,7 @@
                 >
                     <div class="space-x-3">
                         <span class="font-normal">Hello I am</span>
-                        <span>Aweroro Ayomide.</span>
+                        <span>Aweroro A. Ayomide</span>
                     </div>
                     <div class="space-x-3">
                         <span>Software</span>
