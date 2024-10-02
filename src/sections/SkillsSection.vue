@@ -1,18 +1,22 @@
 <template>
-    <div class="container mt-5">
-        <h1 class="mb-10 text-center text-[28px] leading-8 tracking-tight">
+    <div class="w-100 container mx-auto mt-5">
+        <h1
+            class="mb-10 text-center text-[28px] leading-8 tracking-tight lg:text-5xl lg:leading-[56px]"
+        >
             <span>My</span><span class="ml-4 font-extrabold">Skills</span>
         </h1>
-        <div class="mb-40 grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div
+            class="mb-40 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 md:gap-8 xl:grid-cols-5 xl:gap-10 2xl:grid-cols-6"
+        >
             <SkillCard v-for="(skill, index) in skills" :key="index" v-bind="skill" />
         </div>
-        <!-- <DjangoSvg /> -->
+        <!-- Dummy tag so classes added in svg get applied -->
+        <div class="fill-path-white hidden group-hover:fill-black"></div>
     </div>
 </template>
 
 <script setup>
 import SkillCard from '@/components/SkillCard.vue'
-// import DjangoSvg from '@/assets/icons/Django.svg'
 
 const skills = []
 

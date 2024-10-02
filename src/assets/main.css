@@ -9,9 +9,9 @@
     }
 
     .fill-path-black {
-        fill: black !important;
+        @apply fill-black;
     }
     .fill-path-white {
-        fill: white !important;
+        @apply fill-white;
     }
 }
