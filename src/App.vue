@@ -4,6 +4,7 @@
         <HeroSection id="hero" />
         <SkillsSection id="skills" />
         <ExperienceSection id="experience" />
+        <AboutSection id="about" />
     </div>
 </template>
 
@@ -12,4 +13,5 @@ import AppMenu from './components/AppMenu.vue'
 import HeroSection from './sections/HeroSection.vue'
 import SkillsSection from './sections/SkillsSection.vue'
 import ExperienceSection from './sections/ExperienceSection.vue'
+import AboutSection from './sections/AboutSection.vue'
 </script>
