@@ -1,7 +1,13 @@
 <template>
-    <div class="container py-10 lg:py-20">
-        <div class="flex flex-col items-center space-y-10">
-            <WindowPersonIcon class="max-h-[380px] max-w-[350px]" />
+    <div class="container py-10 lg:py-[60px]">
+        <div
+            class="flex flex-col items-center space-y-10 lg:flex-row lg:justify-between lg:space-x-20"
+        >
+            <div>
+                <WindowPersonIcon
+                    class="h-[380px] max-w-[350px] lg:h-[430px] lg:max-w-[400px] xl:h-[550px] xl:max-w-[530px]"
+                />
+            </div>
             <div>
                 <h1 class="section-heading text-start"><span>About</span><span>Me</span></h1>
                 <div class="space-y-5 text-base tracking-wide text-zinc-500">
