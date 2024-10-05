@@ -1,5 +1,5 @@
 <template>
-    <div class="container py-10 lg:py-[60px]">
+    <div class="container mx-auto py-10 lg:py-[60px]">
         <div
             class="flex flex-col items-center space-y-10 lg:flex-row lg:justify-between lg:space-x-20"
         >

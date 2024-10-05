@@ -2,7 +2,7 @@
     <div class="dark-section py-10 lg:py-20">
         <h1 class="section-heading text-white"><span>My</span><span>Projects</span></h1>
 
-        <div class="container grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-28 lg:py-6">
+        <div class="container mx-auto grid grid-cols-1 gap-7 lg:gap-28 lg:py-6">
             <template v-for="(project, index) in projects" :key="index">
                 <ProjectCard v-bind="project" :index="index + 1" />
             </template>
