@@ -70,7 +70,7 @@
             </div>
 
             <PersonIcon
-                class="mx-auto h-[330px] max-w-xl md:h-auto md:min-w-[330px] md:grow md:self-center lg:min-w-[450px] 2xl:self-start"
+                class="mx-auto max-h-[330px] max-w-xl md:h-auto md:max-h-none md:min-w-[330px] md:grow md:self-center lg:min-w-[450px] 2xl:self-start"
             />
         </div>
     </div>

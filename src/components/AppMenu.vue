@@ -122,7 +122,7 @@
                     </li> -->
                     <li>
                         <a
-                            href="#"
+                            href="#projects"
                             class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
                             >Projects</a
                         >

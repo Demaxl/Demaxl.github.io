@@ -17,7 +17,7 @@ import SkillCard from '@/components/SkillCard.vue'
 const skills = []
 
 // Use import.meta.glob to load all SVGs from a directory
-const svgModules = import.meta.glob('@/assets/icons/*.svg', { eager: true })
+const svgModules = import.meta.glob('@/assets/icons/skills/*.svg', { eager: true })
 
 // Iterate over the imported files and store their name and component that
 // was rendered by vite-svg-loader
