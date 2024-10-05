@@ -27,13 +27,11 @@
 
 <script setup>
 import ExportSVG from '@/assets/icons/export.svg'
-
-const { index } = defineProps({
+defineProps({
     index: Number,
     title: String,
     description: String,
     imagePath: String,
     projectLink: String
 })
-console.log(index)
 </script>
