@@ -1,5 +1,5 @@
 <template>
-    <div class="py-10 lg:py-20">
+    <div class="my-10 lg:!my-[80px]">
         <h1 class="section-heading"><span>My</span><span>Testimonial</span></h1>
 
         <div
@@ -21,21 +21,24 @@ const testimonials = [
         position: 'Designer',
         testimonial:
             'I recently had to jump on 10+ different calls across eight different countries to find the right owner.',
-        gender: 'male'
+        gender: 'male',
+        link: 'https://www.example.com'
     },
     {
         name: 'Flora Sheen',
         position: 'Designer',
         testimonial:
             'I recently had to jump on 10+ different calls across eight different countries to find the right owner.',
-        gender: 'female'
+        gender: 'female',
+        link: 'https://www.example.com'
     },
     {
         name: 'Evran Shah',
         position: 'Designer',
         testimonial:
             'I recently had to jump on 10+ different calls across eight different countries to find the right owner.',
-        gender: 'male'
+        gender: 'male',
+        link: 'https://www.example.com'
     }
 ]
 </script>

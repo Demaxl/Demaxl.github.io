@@ -4,12 +4,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite & npm run tailwind",
+    "dev": "vite & npm run tailwind -- --watch",
     "build": "vite build & npm run tailwind",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "tailwind": "npx tailwindcss -i ./src/assets/main.css -o ./src/assets/build.css --watch"
+    "tailwind": "npx tailwindcss -i ./src/assets/main.css -o ./src/assets/build.css"
   },
   "dependencies": {
     "flowbite": "^2.5.2",
