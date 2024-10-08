@@ -2,7 +2,7 @@
     <a
         :href="link"
         target="_blank"
-        class="group flex flex-col items-center space-y-6 rounded-[20px] p-6 text-center tracking-tight shadow-[0px_6px_8px_-6px_#18274B1F,0px_8px_16px_-6px_#18274B14] transition-colors hover:bg-black md:max-w-[370px] md:p-10"
+        class="group flex flex-col items-center space-y-6 rounded-[20px] border p-6 text-center tracking-tight shadow-[0px_6px_8px_-6px_#18274B1F,0px_8px_16px_-6px_#18274B14] transition-colors hover:bg-black md:max-w-[370px] md:p-10"
     >
         <img
             class="h-24 w-24"

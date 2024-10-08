@@ -7,6 +7,7 @@
         <AboutSection id="about" />
         <ProjectsSection id="projects" />
         <TestimonialSection id="testimonial" />
+        <ContactSection id="contact" />
     </div>
 </template>
 
@@ -18,4 +19,5 @@ import ExperienceSection from './sections/ExperienceSection.vue'
 import AboutSection from './sections/AboutSection.vue'
 import ProjectsSection from './sections/ProjectsSection.vue'
 import TestimonialSection from './sections/TestimonialSection.vue'
+import ContactSection from './sections/ContactSection.vue'
 </script>

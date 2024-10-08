@@ -5,7 +5,7 @@
         >
             <div>
                 <WindowPersonIcon
-                    class="h-[380px] max-w-[350px] lg:h-[430px] lg:max-w-[400px] xl:h-[550px] xl:max-w-[530px]"
+                    class="h-[360px] max-w-[350px] lg:h-[430px] lg:max-w-[400px] xl:h-[550px] xl:max-w-[530px]"
                 />
             </div>
             <div>
