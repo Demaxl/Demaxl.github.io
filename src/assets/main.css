@@ -28,4 +28,10 @@
     .dark-section {
         @apply -mx-4 bg-black px-4 sm:-mx-14 sm:px-14 lg:-mx-20 lg:px-20;
     }
+
+    @screen lg {
+        .text-outline {
+            -webkit-text-stroke: 2.5px black;
+        }
+    }
 }

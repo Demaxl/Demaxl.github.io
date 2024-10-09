@@ -27,7 +27,7 @@
                     scrambled it to specimen book.
                 </div>
                 <div class="self-start pb-10">
-                    <SocialsLink />
+                    <SocialsLink section="hero" />
                 </div>
             </div>
 
