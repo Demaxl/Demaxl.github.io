@@ -8,6 +8,7 @@
         <ProjectsSection id="projects" />
         <TestimonialSection id="testimonial" />
         <ContactSection id="contact" />
+        <FooterSection />
     </div>
 </template>
 
@@ -20,4 +21,5 @@ import AboutSection from './sections/AboutSection.vue'
 import ProjectsSection from './sections/ProjectsSection.vue'
 import TestimonialSection from './sections/TestimonialSection.vue'
 import ContactSection from './sections/ContactSection.vue'
+import FooterSection from './sections/FooterSection.vue'
 </script>
