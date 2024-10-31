@@ -127,16 +127,16 @@ onMounted(() => {
         delay: 1,
         defaults: { ease: 'back.out(1.7)', duration: 1 }
     })
-    tl.from('.person-icon > path, .person-icon > ellipse', {
-        scale: 0,
-        // stagger: 0.1,
-        ease: 'back.out(1.7)',
-        strokeWidth: 0
+    tl.from('.person-icon > rect', {
+        width: 0
     })
     tl.from(
-        '.person-icon > rect',
+        '.person-icon > path, .person-icon > ellipse',
         {
-            width: 0
+            scale: 0,
+            // stagger: 0.1,
+            ease: 'back.out(1.7)',
+            strokeWidth: 0
         },
         '-=0.5'
     )
