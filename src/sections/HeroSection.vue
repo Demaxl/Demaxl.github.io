@@ -12,8 +12,8 @@
                         <span>Aweroro A. Ayomide</span>
                     </div>
                     <div class="space-x-3">
-                        <span>Software</span>
-                        <span class="text-outline">Engineer</span>
+                        <span class="first-title"></span>
+                        <span class="text-outline second-title"></span>
                     </div>
                     <div class="space-x-3">
                         <span class="font-normal">Based In</span>
@@ -41,4 +41,52 @@
 import PersonIcon from '@/components/icons/PersonIcon.vue'
 
 import SocialsLink from '@/components/SocialsLink.vue'
+import { gsap } from 'gsap'
+import { onMounted, onUnmounted } from 'vue'
+
+let ctx
+const titles = ['Software Engineer', 'Fullstack Developer', 'Freelancer Developer']
+
+onMounted(() => {
+    ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+            repeat: -1,
+            defaults: { ease: 'none', duration: 1 }
+        })
+        titles.forEach((title, index) => {
+            tl.to('.first-title', {
+                text: title.split(' ')[0]
+            })
+            tl.to(
+                '.second-title',
+                {
+                    text: title.split(' ')[1]
+                },
+                '-=0.1'
+            )
+
+            // if (index === titles.length - 1) return
+            tl.to(
+                '.second-title',
+                {
+                    text: {
+                        value: '',
+                        rtl: true
+                    }
+                },
+                '+=2'
+            )
+            tl.to('.first-title', {
+                text: {
+                    value: '',
+                    rtl: true
+                }
+            })
+        })
+    })
+})
+
+onUnmounted(() => {
+    ctx.revert()
+})
 </script>

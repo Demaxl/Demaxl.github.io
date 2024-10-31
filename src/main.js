@@ -8,5 +8,10 @@ import 'flowbite'
 
 import 'animate.css'
 
+import gsap from 'gsap'
+import { TextPlugin } from 'gsap/TextPlugin'
+
+gsap.registerPlugin(TextPlugin)
+
 const app = createApp(App)
 app.mount('#app')
