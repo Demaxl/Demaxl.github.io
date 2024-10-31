@@ -1,5 +1,5 @@
 <template>
-    <svg viewBox="0 0 350 332" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="person-icon" viewBox="0 0 350 332" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M70.7246 244.362C28.4096 268.19 52.2375 326.938 66.2055 329.403C76.9638 331.301 112.331 330.213 129.472 329.403L262.169 231.216L184.522 220.534C160.695 220.534 104.577 225.3 70.7246 244.362Z"
             fill="white"
@@ -116,3 +116,33 @@
         />
     </svg>
 </template>
+
+<script setup>
+import { gsap } from 'gsap'
+import { onMounted, onUnmounted } from 'vue'
+let tl
+
+onMounted(() => {
+    tl = gsap.timeline({
+        delay: 1,
+        defaults: { ease: 'back.out(1.7)', duration: 1 }
+    })
+    tl.from('.person-icon > path, .person-icon > ellipse', {
+        scale: 0,
+        // stagger: 0.1,
+        ease: 'back.out(1.7)',
+        strokeWidth: 0
+    })
+    tl.from(
+        '.person-icon > rect',
+        {
+            width: 0
+        },
+        '-=0.5'
+    )
+})
+
+onUnmounted(() => {
+    tl.revert()
+})
+</script>
