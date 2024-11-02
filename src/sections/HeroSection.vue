@@ -50,7 +50,7 @@ import { onMounted, onUnmounted, useTemplateRef } from 'vue'
 const textContainer = useTemplateRef('textContainer')
 
 let ctx
-const titles = ['Software Engineer', 'Fullstack Developer', 'Freelancer Developer']
+const titles = ['Software Engineer', 'Fullstack Developer', 'Freelance Developer']
 
 onMounted(() => {
     ctx = gsap.context(() => {

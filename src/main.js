@@ -10,8 +10,9 @@ import 'animate.css'
 
 import gsap from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(TextPlugin)
+gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
 const app = createApp(App)
 app.mount('#app')
