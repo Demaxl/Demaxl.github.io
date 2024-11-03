@@ -4,6 +4,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 import { vHoverAnimation } from './directives/VHoverAnimation'
+import { vSectionHeadingAnimation } from './directives/VSectionHeadingAnimation'
 
 import './assets/build.css'
 import 'flowbite'
@@ -17,5 +18,6 @@ gsap.registerPlugin(TextPlugin, ScrollTrigger)
 
 const app = createApp(App)
 app.directive('hover-animation', vHoverAnimation)
+app.directive('section-heading-animation', vSectionHeadingAnimation)
 
 app.mount('#app')

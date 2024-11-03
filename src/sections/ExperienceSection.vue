@@ -1,6 +1,8 @@
 <template>
     <div class="dark-section py-10 lg:py-20">
-        <h1 class="section-heading text-white"><span>My</span> <span>Experience</span></h1>
+        <h1 v-section-heading-animation class="section-heading text-white">
+            <span>My</span> <span>Experience</span>
+        </h1>
         <div class="mb-5">
             <div
                 class="rounded-[10px] border border-zinc-500 px-6 py-[30px] transition-colors hover:border-zinc-800 hover:bg-zinc-800"
