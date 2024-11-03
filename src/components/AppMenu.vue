@@ -1,6 +1,6 @@
 <template>
     <nav
-        class="animate__animated animate__bounceInDown text-xl font-semibold leading-5 tracking-tight"
+        class="animate__animated animate__fadeInDown text-xl font-semibold leading-5 tracking-tight"
     >
         <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
             <!-- Logo -->
