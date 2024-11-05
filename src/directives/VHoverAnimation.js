@@ -1,10 +1,13 @@
 import { gsap } from 'gsap'
 
+import { isElementAnimating } from '@/composables/utils'
+
 export const vHoverAnimation = {
     mounted(el, binding) {
         let tween
 
         const onHover = () => {
+            if (isElementAnimating(el)) return
             tween = gsap.to(el, {
                 scale: binding.value?.scale || 1.05,
                 y: binding.value?.y || -5,
