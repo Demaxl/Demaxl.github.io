@@ -18,7 +18,7 @@ export const vHoverAnimation = {
         }
 
         const onHoverOut = () => {
-            tween.reverse()
+            tween?.reverse()
         }
 
         el.addEventListener('mouseenter', onHover)
