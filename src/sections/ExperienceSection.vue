@@ -1,5 +1,5 @@
 <template>
-    <div class="dark-section py-10 lg:py-20">
+    <div class="dark-section overflow-hidden py-10 lg:py-20">
         <h1 v-section-heading-animation class="section-heading text-white">
             <span>My</span> <span>Experience</span>
         </h1>

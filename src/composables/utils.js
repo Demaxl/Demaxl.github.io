@@ -7,4 +7,8 @@ function isElementAnimating(element) {
     return tweens.some((tween) => tween.isActive())
 }
 
-export { isElementAnimating }
+function querySelect(templateRef, selector) {
+    return templateRef.value.querySelectorAll(selector)
+}
+
+export { isElementAnimating, querySelect as $ }
