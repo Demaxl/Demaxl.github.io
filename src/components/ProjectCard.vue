@@ -18,7 +18,10 @@
                 :ref="'mask' + index"
             ></div>
         </div>
-        <div class="flex flex-col space-y-7 tracking-tight text-white">
+        <div
+            :ref="'textContainer' + index"
+            class="flex flex-col space-y-7 tracking-tight text-white"
+        >
             <h3 class="text-2xl font-extrabold leading-7 lg:text-5xl lg:leading-[56px]">
                 {{ index.toString().padStart(2, '0') }}
             </h3>
@@ -40,7 +43,7 @@
 <script setup>
 import ExportSVG from '@/assets/icons/export.svg'
 import gsap from 'gsap'
-import { ref, onMounted, useTemplateRef, computed } from 'vue'
+import { onMounted, useTemplateRef, computed } from 'vue'
 
 const { index } = defineProps({
     index: Number,
@@ -54,14 +57,15 @@ const alternate = computed(() => index % 2 === 0)
 
 const image = useTemplateRef('projectImage' + index)
 const container = useTemplateRef('projectImageContainer' + index)
+const textContainer = useTemplateRef('textContainer' + index)
 const mask = useTemplateRef('mask' + index)
 
 onMounted(() => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: container.value,
-            start: 'top 85%',
-            toggleActions: 'play none play reverse'
+            start: 'top 85%'
+            // toggleActions: 'play none play reset'
         }
     })
 
@@ -102,6 +106,18 @@ onMounted(() => {
             ease: 'power2.out'
         },
         0
+    )
+
+    tl.from(
+        textContainer.value.children,
+        {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: 'back.out(1.7)'
+        },
+        '-=75%'
     )
 })
 </script>

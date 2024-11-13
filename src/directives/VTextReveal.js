@@ -11,7 +11,7 @@ export const vTextReveal = {
             delay: binding.value?.delay || 0,
             scrollTrigger: {
                 trigger: el,
-                start: 'top 80%'
+                start: binding.value?.scrollTrigger?.start || 'top 80%'
             }
         })
     }
