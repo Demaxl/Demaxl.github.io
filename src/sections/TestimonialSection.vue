@@ -1,6 +1,8 @@
 <template>
     <div class="my-10 lg:!my-[80px]">
-        <h1 class="section-heading"><span>My</span><span>Testimonial</span></h1>
+        <h1 v-section-heading-animation class="section-heading">
+            <span>My</span><span>Testimonial</span>
+        </h1>
 
         <div
             class="flex flex-col space-y-10 md:flex-row md:justify-center md:space-x-8 md:space-y-0"
@@ -41,4 +43,30 @@ const testimonials = [
         link: 'https://www.example.com'
     }
 ]
+
+import gsap from 'gsap'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: `#testimonial`,
+            start: 'top 80%',
+            markers: true,
+            toggleActions: 'play none play reset'
+        }
+    })
+
+    tl.from('.testimonial-card', {
+        y: 100,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.1
+    })
+
+    tl.from('.testimonial-card > p', {
+        text: '',
+        duration: 1
+    })
+})
 </script>

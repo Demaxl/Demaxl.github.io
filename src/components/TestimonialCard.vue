@@ -1,8 +1,9 @@
 <template>
     <a
+        v-hover-animation
         :href="link"
         target="_blank"
-        class="group flex flex-col items-center space-y-6 rounded-[20px] border p-6 text-center tracking-tight shadow-[0px_6px_8px_-6px_#18274B1F,0px_8px_16px_-6px_#18274B14] transition-colors hover:bg-black md:max-w-[370px] md:p-10"
+        class="testimonial-card group flex flex-col items-center space-y-6 rounded-[20px] border p-6 text-center tracking-tight shadow-[0px_6px_8px_-6px_#18274B1F,0px_8px_16px_-6px_#18274B14] transition-colors hover:bg-black md:max-w-[370px] md:p-10"
     >
         <img
             class="h-24 w-24"
@@ -37,9 +38,31 @@ defineProps({
     position: String,
     testimonial: String,
     link: String,
+    index: Number,
     gender: {
         type: String,
         default: 'male'
     }
+})
+
+import gsap from 'gsap'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: `#testimonial`,
+            start: 'top 80%',
+            markers: true,
+            toggleActions: 'play none play reset'
+        }
+    })
+
+    tl.to('.testimonial-card > img', {
+        scale: 1.01,
+        repeat: -1,
+        duration: 1,
+        yoyo: true
+    })
 })
 </script>
