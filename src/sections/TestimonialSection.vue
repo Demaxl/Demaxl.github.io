@@ -51,9 +51,7 @@ onMounted(() => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: `#testimonial`,
-            start: 'top 80%',
-            markers: true,
-            toggleActions: 'play none play reset'
+            start: 'top 80%'
         }
     })
 
