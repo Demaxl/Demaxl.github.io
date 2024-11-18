@@ -13,6 +13,9 @@ export default {
         extend: {
             colors: {
                 neutral: '#404040'
+            },
+            screens: {
+                xs: '475px'
             }
         }
     },
