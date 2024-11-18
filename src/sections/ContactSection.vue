@@ -73,8 +73,7 @@ onMounted(() => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: contactForm.value,
-            start: 'top 80%',
-            toggleActions: 'play none play reset'
+            start: 'top 75%'
         }
     })
 
@@ -91,10 +90,11 @@ onMounted(() => {
             opacity: 0,
             y: 50,
             duration: 1,
-            ease: 'back.out(1.7)',
-            stagger: 0.1
+            stagger: {
+                each: 0.1
+            }
         },
-        0
+        '-=0.5'
     )
 })
 </script>
