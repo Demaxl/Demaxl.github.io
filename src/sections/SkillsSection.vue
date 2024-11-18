@@ -1,6 +1,8 @@
 <template>
     <div class="w-100 container mx-auto mt-5">
-        <h1 class="section-heading"><span>My</span><span>Skills</span></h1>
+        <h1 v-section-heading-animation class="section-heading">
+            <span>My</span><span>Skills</span>
+        </h1>
         <div
             class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 md:gap-8 lg:mb-40 xl:grid-cols-5 xl:gap-10 2xl:grid-cols-6"
         >
@@ -13,6 +15,8 @@
 
 <script setup>
 import SkillCard from '@/components/SkillCard.vue'
+import { gsap } from 'gsap'
+import { onMounted, onUnmounted, useTemplateRef } from 'vue'
 
 const skills = []
 
@@ -27,4 +31,23 @@ for (const path in svgModules) {
         svgComponent: svgModules[path].default // the component
     })
 }
+
+let ctx
+onMounted(() => {
+    ctx = gsap.context(() => {
+        gsap.from('.grid > div', {
+            duration: 1,
+            y: 100,
+            opacity: 0,
+            stagger: 0.1,
+            ease: 'back.out(1.7)',
+            scrollTrigger: {
+                trigger: '.grid',
+                start: 'top 75%'
+            }
+        })
+    })
+})
+
+onUnmounted(() => ctx.revert())
 </script>

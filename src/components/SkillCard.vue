@@ -1,6 +1,7 @@
 <template>
     <div
-        class="group inline-block max-h-[180px] max-w-[180px] rounded-[4px] border-2 border-black p-6 transition-colors hover:bg-black"
+        v-hover-animation
+        class="group inline-block max-h-[180px] max-w-[180px] rounded-[4px] border-2 border-black p-6 transition-colors duration-300 hover:bg-black"
     >
         <div class="flex flex-col items-center space-y-8">
             <component :is="svgComponent" class="h-14 w-14 fill-black group-hover:fill-white" />

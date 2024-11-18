@@ -3,7 +3,10 @@
         <div
             class="flex flex-col space-y-12 space-y-reverse md:flex-row md:items-center md:justify-center md:px-4"
         >
-            <div class="order-last flex flex-col space-y-8 md:order-first md:my-14">
+            <div
+                ref="textContainer"
+                class="order-last flex flex-col space-y-8 md:order-first md:my-14"
+            >
                 <div
                     class="flex flex-col space-y-3 text-[28px] font-extrabold leading-8 tracking-tight lg:text-5xl lg:leading-[56px]"
                 >
@@ -12,8 +15,8 @@
                         <span>Aweroro A. Ayomide</span>
                     </div>
                     <div class="space-x-3">
-                        <span>Software</span>
-                        <span class="text-outline">Engineer</span>
+                        <span class="first-title"></span>
+                        <span class="text-outline second-title"></span>
                     </div>
                     <div class="space-x-3">
                         <span class="font-normal">Based In</span>
@@ -41,4 +44,64 @@
 import PersonIcon from '@/components/icons/PersonIcon.vue'
 
 import SocialsLink from '@/components/SocialsLink.vue'
+import { gsap } from 'gsap'
+import { onMounted, onUnmounted, useTemplateRef } from 'vue'
+
+const textContainer = useTemplateRef('textContainer')
+
+let ctx
+const titles = ['Software Engineer', 'Fullstack Developer', 'Freelance Developer']
+
+onMounted(() => {
+    ctx = gsap.context(() => {
+        // Title
+        const tl = gsap.timeline({
+            repeat: -1,
+            defaults: { ease: 'none', duration: 1 }
+        })
+        titles.forEach((title, index) => {
+            tl.to('.first-title', {
+                text: title.split(' ')[0]
+            })
+            tl.to(
+                '.second-title',
+                {
+                    text: title.split(' ')[1]
+                },
+                '-=0.1'
+            )
+
+            // if (index === titles.length - 1) return
+            tl.to(
+                '.second-title',
+                {
+                    text: {
+                        value: '',
+                        rtl: true
+                    }
+                },
+                '+=2'
+            )
+            tl.to('.first-title', {
+                text: {
+                    value: '',
+                    rtl: true
+                }
+            })
+        })
+
+        // Text
+        gsap.from(textContainer.value.children, {
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'back.out(1.7)'
+        })
+    })
+})
+
+onUnmounted(() => {
+    ctx.revert()
+})
 </script>

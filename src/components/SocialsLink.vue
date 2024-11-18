@@ -1,5 +1,16 @@
 <template>
-    <div class="flex space-x-[24px]">
+    <div class="xs:space-x-[24px] flex space-x-4">
+        <!-- Email -->
+        <a
+            target="_blank"
+            href="mailto:aweabdullahi@gmail.com"
+            :data-tooltip-target="`${section}-tooltip-email`"
+            class="group h-12 w-12 cursor-pointer rounded border-2 border-black p-3 transition-colors hover:bg-black lg:h-14 lg:w-14 lg:p-4"
+        >
+            <EmailIcon class="h-5 w-5 fill-black group-hover:fill-white" />
+            <VToolTip content="Send an email" :id="`${section}-tooltip-email`" />
+        </a>
+
         <!-- Freelancer -->
         <a
             target="_blank"
@@ -44,6 +55,7 @@ import LinkedinIcon from '@/components/icons/LinkedinIcon.vue'
 import FreelancerIcon from '@/components/icons/FreelancerIcon.vue'
 import GithubIcon from '@/components/icons/GithubIcon.vue'
 import WhatsappIcon from '@/components/icons/WhatsappIcon.vue'
+import EmailIcon from './icons/EmailIcon.vue'
 
 import VToolTip from '@/components/VToolTip.vue'
 

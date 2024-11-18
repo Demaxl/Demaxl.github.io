@@ -1,8 +1,10 @@
 <template>
     <div class="py-16">
-        <h1 class="section-heading"><span>Contact</span><span>Me</span></h1>
+        <h1 v-section-heading-animation class="section-heading">
+            <span>Contact</span><span>Me</span>
+        </h1>
         <div class="flex flex-col space-y-11 lg:flex-row lg:justify-center lg:space-x-24">
-            <form class="flex basis-1/2 flex-col space-y-5" action="#">
+            <form ref="contact-form" class="flex basis-1/2 flex-col space-y-5" action="#">
                 <input
                     class="rounded-[4px] border-[1.4px] border-black px-6 py-4 leading-5 tracking-tight transition-colors placeholder:text-zinc-500 hover:bg-zinc-100 focus:border-black focus:shadow-md focus:shadow-gray-400/10 focus:ring-black"
                     type="text"
@@ -34,11 +36,13 @@
                     <SocialsLink section="contact" />
                 </div>
             </form>
-            <div class="flex flex-col space-y-8">
+            <div class="flex flex-col space-y-8" ref="text-contact-container">
                 <div
                     class="flex flex-col space-y-3 text-[28px] font-extrabold leading-8 tracking-tight lg:text-5xl lg:leading-[56px]"
                 >
-                    <div>Lets <span class="text-outline">talk</span> for</div>
+                    <div>
+                        Lets <span ref="contact-outline-text" class="text-outline">talk</span> for
+                    </div>
                     <div>Something special</div>
                 </div>
                 <p class="tracking-wide text-zinc-500 lg:!mt-5 lg:leading-6">
@@ -57,4 +61,40 @@
 </template>
 <script setup>
 import SocialsLink from '@/components/SocialsLink.vue'
+
+import gsap from 'gsap'
+import { onMounted, useTemplateRef } from 'vue'
+
+const contactForm = useTemplateRef('contact-form')
+const textContactContainer = useTemplateRef('text-contact-container')
+const contactOutlineText = useTemplateRef('contact-outline-text')
+
+onMounted(() => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: contactForm.value,
+            start: 'top 80%',
+            toggleActions: 'play none play reset'
+        }
+    })
+
+    tl.from(contactForm.value.children, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+        ease: 'back.out(1.7)',
+        stagger: 0.1
+    })
+    tl.from(
+        textContactContainer.value.children,
+        {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: 'back.out(1.7)',
+            stagger: 0.1
+        },
+        0
+    )
+})
 </script>

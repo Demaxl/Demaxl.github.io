@@ -1,5 +1,7 @@
 <template>
-    <nav class="text-xl font-semibold leading-5 tracking-tight">
+    <nav
+        class="animate__animated animate__fadeInDown text-xl font-semibold leading-5 tracking-tight"
+    >
         <div class="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
             <!-- Logo -->
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -68,7 +70,7 @@
                 <VToolTip content="Download resume" id="tooltip-resume-btn" />
                 <!-- Dropdown button -->
                 <button
-                    data-collapse-toggle="navbar-cta"
+                    @click="toggleDropdown"
                     type="button"
                     class="inline-flex items-center justify-center rounded-lg p-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden"
                     aria-controls="navbar-cta"
@@ -93,7 +95,8 @@
             </div>
             <!-- Section menu -->
             <div
-                class="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
+                :class="[!showDropdown ? 'h-0' : '']"
+                class="w-full items-center justify-between overflow-hidden md:order-1 md:flex md:h-fit md:w-auto"
                 id="navbar-cta"
             >
                 <ul
@@ -114,12 +117,12 @@
                         >
                     </li>
                     <!-- <li>
-                        <a
-                            href="#experience"
-                            class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
-                            >Experience</a
-                        >
-                    </li> -->
+                            <a
+                                href="#experience"
+                                class="block rounded px-3 py-4 pl-5 text-gray-900 hover:text-neutral hover:underline md:px-3 md:py-2"
+                                >Experience</a
+                            >
+                        </li> -->
                     <li>
                         <a
                             href="#projects"
@@ -167,4 +170,26 @@
 
 <script setup>
 import VToolTip from '@/components/VToolTip.vue'
+
+import { gsap } from 'gsap'
+import Flip from 'gsap/Flip'
+import { nextTick, ref } from 'vue'
+
+gsap.registerPlugin(Flip)
+
+const showDropdown = ref(false)
+
+async function toggleDropdown() {
+    const state = Flip.getState('#navbar-cta', {
+        props: 'height'
+    })
+    showDropdown.value = !showDropdown.value
+    await nextTick()
+
+    Flip.from(state, {
+        fade: true,
+        duration: 0.5,
+        ease: 'power1.inOut'
+    })
+}
 </script>

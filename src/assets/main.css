@@ -4,7 +4,7 @@
 
 @layer components {
     .section-heading {
-        @apply mb-10 text-center text-[28px] leading-8 tracking-tight lg:mb-20 lg:text-5xl lg:leading-[56px];
+        @apply mb-10 flex justify-center text-center text-[28px] leading-8 tracking-tight lg:mb-20 lg:text-5xl lg:leading-[56px];
     }
 
     .section-heading > span:last-child {

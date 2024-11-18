@@ -1,9 +1,12 @@
 <template>
-    <div class="dark-section py-10 lg:py-20">
-        <h1 class="section-heading text-white"><span>My</span> <span>Experience</span></h1>
+    <div class="dark-section overflow-hidden py-10 lg:py-20">
+        <h1 v-section-heading-animation class="section-heading text-white">
+            <span>My</span> <span>Experience</span>
+        </h1>
         <div class="mb-5">
             <div
-                class="rounded-[10px] border border-zinc-500 px-6 py-[30px] transition-colors hover:border-zinc-800 hover:bg-zinc-800"
+                v-aos="'animate__fadeInUp'"
+                class="experience-card rounded-[10px] border border-zinc-500 px-6 py-[30px] transition-colors duration-300 hover:border-zinc-800 hover:bg-zinc-800"
             >
                 <div
                     class="mb-7 flex flex-col space-y-[30px] md:flex-row md:items-center md:justify-between md:space-y-0"
@@ -21,6 +24,8 @@
                             />
                         </a>
                         <h2
+                            ref="experience-title"
+                            v-text-reveal="{ delay: 0.8 }"
                             class="text-xl font-semibold leading-6 tracking-tight text-white lg:text-2xl lg:leading-7"
                         >
                             Freelance Software Engineer
@@ -30,7 +35,10 @@
                         >August 2021 - Present</span
                     >
                 </div>
-                <div class="text-base tracking-wide text-zinc-300">
+                <div
+                    v-aos="{ delay: 1.3, animation: 'animate__fadeIn' }"
+                    class="text-base tracking-wide text-zinc-300"
+                >
                     As a Senior Software Engineer at Google, I played a pivotal role in developing
                     innovative solutions for Google's core search algorithms. Collaborating with a
                     dynamic team of engineers, I contributed to the enhancement of search accuracy

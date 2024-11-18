@@ -1,12 +1,27 @@
 <template>
     <div class="grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-28 xl:items-center">
-        <img
-            :class="{ 'lg:order-last': index % 2 === 0 }"
-            class="rounded-[19px] shadow-[0px_8px_18px_-6px_rgba(24,39,75,0.12),0px_12px_42px_-4px_rgba(24,39,75,0.12)]"
-            :src="imagePath"
-            :alt="`${title} project image`"
-        />
-        <div class="flex flex-col space-y-7 tracking-tight text-white">
+        <div
+            class="relative mx-auto w-full max-w-2xl overflow-hidden"
+            :class="{ 'lg:order-last': alternate }"
+            :ref="'projectImageContainer' + index"
+        >
+            <img
+                v-hover-animation
+                class="rounded-[19px] shadow-[0px_8px_18px_-6px_rgba(24,39,75,0.12),0px_12px_42px_-4px_rgba(24,39,75,0.12)]"
+                :src="imagePath"
+                :alt="`${title} project image`"
+                :ref="'projectImage' + index"
+            />
+            <div
+                :class="{ 'origin-top': alternate }"
+                class="absolute inset-0 bg-black"
+                :ref="'mask' + index"
+            ></div>
+        </div>
+        <div
+            :ref="'textContainer' + index"
+            class="flex flex-col space-y-7 tracking-tight text-white"
+        >
             <h3 class="text-2xl font-extrabold leading-7 lg:text-5xl lg:leading-[56px]">
                 {{ index.toString().padStart(2, '0') }}
             </h3>
@@ -27,11 +42,82 @@
 
 <script setup>
 import ExportSVG from '@/assets/icons/export.svg'
-defineProps({
+import gsap from 'gsap'
+import { onMounted, useTemplateRef, computed } from 'vue'
+
+const { index } = defineProps({
     index: Number,
     title: String,
     description: String,
     imagePath: String,
     projectLink: String
+})
+
+const alternate = computed(() => index % 2 === 0)
+
+const image = useTemplateRef('projectImage' + index)
+const container = useTemplateRef('projectImageContainer' + index)
+const textContainer = useTemplateRef('textContainer' + index)
+const mask = useTemplateRef('mask' + index)
+
+onMounted(() => {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: container.value,
+            start: 'top 85%'
+            // toggleActions: 'play none play reset'
+        }
+    })
+
+    if (alternate.value) {
+        tl.set(mask.value, {
+            height: '100%',
+            top: 0,
+            bottom: 'auto'
+        }).to(mask.value, {
+            height: '0%',
+            duration: 1,
+            ease: 'sine.out'
+        })
+        // tl.set(mask.value, {
+        //     scaleY: 1,
+        //     transformOrigin: 'top'
+        // }).to(mask.value, {
+        //     scaleY: 0,
+        //     duration: 1.5,
+        //     ease: 'power2.inOut'
+        // })
+    } else {
+        tl.set(mask.value, {
+            width: '100%',
+            right: 0,
+            left: 'auto'
+        }).to(mask.value, {
+            width: '0%',
+            duration: 1,
+            ease: 'sine.out'
+        })
+    }
+    tl.from(
+        image.value,
+        {
+            scale: 1.2,
+            duration: 1.5,
+            ease: 'power2.out'
+        },
+        0
+    )
+
+    tl.from(
+        textContainer.value.children,
+        {
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: 'back.out(1.7)'
+        },
+        '-=75%'
+    )
 })
 </script>
