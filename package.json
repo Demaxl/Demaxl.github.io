@@ -4,12 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite & npm run tailwind -- --watch",
-    "build": "vite build & npm run tailwind",
+    "dev": "vite",
+    "build": "vite build ",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/",
-    "tailwind": "npx tailwindcss -i ./src/assets/main.css -o ./src/assets/build.css"
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "@vueuse/core": "^11.1.0",
@@ -23,11 +22,13 @@
     "@rushstack/eslint-patch": "^1.8.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vue/eslint-config-prettier": "^9.0.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "postcss": "^8.4.49",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
-    "tailwindcss": "^3.4.13",
+    "tailwindcss": "^3.4.15",
     "vite": "^5.3.1",
     "vite-plugin-vue-devtools": "^7.3.1",
     "vite-svg-loader": "^5.1.0"

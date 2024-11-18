@@ -1,5 +1,3 @@
-// import './assets/main.css'
-
 import { createApp } from 'vue'
 import App from './App.vue'
 
@@ -8,9 +6,10 @@ import { vSectionHeadingAnimation } from './directives/VSectionHeadingAnimation'
 import { vAnimateOnScroll } from './directives/VAnimateOnScroll'
 import { vTextReveal } from './directives/VTextReveal'
 
-import './assets/build.css'
 import 'flowbite'
 import 'animate.css'
+
+import '@/style.css'
 
 import gsap from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
