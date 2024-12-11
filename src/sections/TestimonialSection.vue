@@ -1,5 +1,5 @@
 <template>
-    <div class="my-10 lg:!my-[80px]">
+    <div class="my-10 overflow-hidden lg:!my-[80px]">
         <h1 v-section-heading-animation class="section-heading">
             <span>My</span><span>Testimonial</span>
         </h1>
