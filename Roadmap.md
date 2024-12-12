@@ -1,0 +1,7 @@
+-   add content for project section
+-   Offload static content to cdn
+-   add logo
+-   upload resume
+-   Fix width issue of hero section changing text
+-   add seo tags
+-   use form spree or form submit to send email in contact form

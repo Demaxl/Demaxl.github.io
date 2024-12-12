@@ -46,8 +46,10 @@
                     <div>Something special</div>
                 </div>
                 <p class="tracking-wide text-zinc-500 lg:!mt-5 lg:leading-6">
-                    I seek to push the limits of creativity to create high-engaging, user-friendly,
-                    and memorable interactive experiences.
+                    Got an idea or project in mind? Let’s bring it to life together! I specialize in
+                    creating innovative solutions tailored to your needs. Whether it's a website,
+                    automation tools, or cutting-edge software, I'm here to help. Feel free to reach
+                    out—I’d love to discuss how we can work together!
                 </p>
                 <div
                     class="flex flex-col space-y-3 text-xl font-bold leading-6 tracking-tight lg:text-[28px] lg:leading-8"
@@ -67,7 +69,6 @@ import { onMounted, useTemplateRef } from 'vue'
 
 const contactForm = useTemplateRef('contact-form')
 const textContactContainer = useTemplateRef('text-contact-container')
-const contactOutlineText = useTemplateRef('contact-outline-text')
 
 onMounted(() => {
     const tl = gsap.timeline({

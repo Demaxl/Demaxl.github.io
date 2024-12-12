@@ -5,7 +5,7 @@
         </h1>
 
         <div
-            class="flex flex-col space-y-10 md:flex-row md:justify-center md:space-x-8 md:space-y-0"
+            class="md: flex flex-col items-center space-y-10 lg:flex-row lg:justify-center lg:space-x-8 lg:space-y-0"
         >
             <template v-for="(testimonial, index) in testimonials" :key="index">
                 <TestimonialCard v-bind="testimonial" :index="index" />
@@ -19,28 +19,30 @@ import TestimonialCard from '@/components/TestimonialCard.vue'
 
 const testimonials = [
     {
-        name: 'Evran Shah',
-        position: 'Designer',
+        name: 'Yves Payanzo',
+        position: 'Client',
         testimonial:
-            'I recently had to jump on 10+ different calls across eight different countries to find the right owner.',
+            'This was an outstanding performance by Abdullahi, in all regards. Quality, time, communication, and overall experience.',
         gender: 'male',
-        link: 'https://www.example.com'
+        imagePath: '/images/testimonials/yves.webp',
+        link: 'https://www.freelancer.com/u/Demaxl?review_context_id=38073783&review_type=project&sb=t'
     },
     {
-        name: 'Flora Sheen',
-        position: 'Designer',
+        name: 'Jay-Ar A.',
+        position: 'Client',
         testimonial:
-            'I recently had to jump on 10+ different calls across eight different countries to find the right owner.',
+            'Abdullahi A. was very swift in his work. He also has a very good communication skill which made our conversations easier to understand. I will definitely hire him again.',
         gender: 'female',
-        link: 'https://www.example.com'
+        link: 'https://www.freelancer.com/u/Demaxl?review_context_id=37080757&review_type=project&sb=t',
+        imagePath: '/images/testimonials/sidero.webp'
     },
     {
-        name: 'Evran Shah',
-        position: 'Designer',
-        testimonial:
-            'I recently had to jump on 10+ different calls across eight different countries to find the right owner.',
-        gender: 'male',
-        link: 'https://www.example.com'
+        name: 'Agne U.',
+        position: 'Client',
+        testimonial: `He isn't tricky as a developer and takes responsibility for his work. I like his attitude and will continue to work with him`,
+        gender: 'female',
+        imagePath: null,
+        link: 'https://www.freelancer.com/u/Demaxl?review_context_id=38216503&review_type=project&sb=t'
     }
 ]
 
