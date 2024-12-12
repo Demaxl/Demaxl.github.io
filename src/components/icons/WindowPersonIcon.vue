@@ -196,7 +196,7 @@
 
 <script setup>
 import gsap from 'gsap'
-import { onMounted, useTemplateRef, ref, computed } from 'vue'
+import { onMounted, useTemplateRef } from 'vue'
 
 const windowPersonIcon = useTemplateRef('window-person')
 

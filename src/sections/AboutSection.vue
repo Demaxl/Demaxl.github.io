@@ -14,25 +14,32 @@
                 </h1>
                 <div ref="text-container" class="space-y-5 text-base tracking-wide text-zinc-500">
                     <p>
-                        I'm a passionate, self-proclaimed designer who specializes in full stack
-                        development (React.js & Node.js). I am very enthusiastic about bringing the
-                        technical and visual aspects of digital products to life. User experience,
-                        pixel perfect design, and writing clear, readable, highly performant code
-                        matters to me.
+                        I am a passionate software engineer with a knack for solving problems
+                        through innovative and efficient coding solutions. I am currently a
+                        first-class student at the University of Lagos, pursuing a Bachelor’s degree
+                        in Computer Science with an impressive CGPA of <strong>4.89/5.0</strong>,
+                        where I am continuously refining my expertise in software development and
+                        technology. My mission is to create impactful digital experiences that
+                        empower businesses and individuals to achieve their goals.
                     </p>
                     <p>
-                        I began my journey as a web developer in 2015, and since then, I've
-                        continued to grow and evolve as a developer, taking on new challenges and
-                        learning the latest technologies along the way. Now, in my early thirties, 7
-                        years after starting my web development journey, I'm building cutting-edge
-                        web applications using modern technologies such as Next.js, TypeScript,
-                        Nestjs, Tailwindcss, Supabase and much more.
+                        With over three years of experience as a freelance software engineer, I have
+                        successfully delivered various projects, including web development, process
+                        automation, and web scraping solutions. I specialize in using tools like
+                        Python, Django, Vue.js, and JavaScript to develop user-friendly and scalable
+                        applications. My clients appreciate my attention to detail, timely delivery,
+                        and ability to transform complex requirements into elegant solutions that
+                        exceed expectations.
                     </p>
                     <p>
-                        When I'm not in full-on developer mode, you can find me hovering around on
-                        twitter or on indie hacker, witnessing the journey of early startups or
-                        enjoying some free time. You can follow me on Twitter where I share
-                        tech-related bites and build in public, or you can follow me on GitHub.
+                        Beyond my academic and freelance work, I am always eager to learn new
+                        technologies and embrace challenges that push me to grow as a developer.
+                        When I’m not coding, you can find me exploring tech blogs, contributing to
+                        open-source projects, brainstorming creative ideas to improve my craft, or
+                        just relaxing by playing chess, travelling and working out. If you're
+                        looking for a developer who’s dedicated, skilled, and committed to bringing
+                        your vision to life, I’d love to connect and collaborate on exciting
+                        projects.
                     </p>
                 </div>
             </div>

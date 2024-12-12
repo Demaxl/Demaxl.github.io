@@ -39,10 +39,20 @@
                     v-aos="{ delay: 1.3, animation: 'animate__fadeIn' }"
                     class="text-base tracking-wide text-zinc-300"
                 >
-                    As a Senior Software Engineer at Google, I played a pivotal role in developing
-                    innovative solutions for Google's core search algorithms. Collaborating with a
-                    dynamic team of engineers, I contributed to the enhancement of search accuracy
-                    and efficiency, optimizing user experiences for millions of users worldwide.
+                    As a Freelance Software Engineer. I provide custom software development and
+                    automation services to clients worldwide. Specialized in Python, Javascript,
+                    Django, and Vue.js, delivering solutions such as web scraping tools, dynamic web
+                    applications, and process automation workflows. Successfully completed 50+
+                    projects, helping clients optimize their workflows and achieve measurable
+                    results. Known for delivering projects on time while maintaining high-quality
+                    standards resulting in a five-star rating on
+                    <a
+                        class="hover:text-white"
+                        href="https://www.freelancer.com/u/demaxl"
+                        target="_blank"
+                    >
+                        Freelancer.com
+                    </a>
                 </div>
             </div>
         </div>

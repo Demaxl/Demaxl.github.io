@@ -5,7 +5,7 @@
         >
             <div
                 ref="textContainer"
-                class="order-last flex flex-col space-y-8 md:order-first md:my-14"
+                class="order-last flex basis-[55%] flex-col space-y-8 md:order-first md:my-14"
             >
                 <div
                     class="flex flex-col space-y-3 text-[28px] font-extrabold leading-8 tracking-tight lg:text-5xl lg:leading-[56px]"
@@ -24,10 +24,13 @@
                     </div>
                 </div>
                 <div class="inline-block text-base tracking-wide text-zinc-500">
-                    I'm Aweroro Ayomide Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to specimen book.
+                    I'm Aweroro Ayomide Abdullahi, a dedicated software developer based in Lagos,
+                    Nigeria. I specialize in web development, web scraping, and automation, with
+                    expertise in Python, Django, and Vue.js. I’m passionate about creating
+                    efficient, user-focused digital solutions that make a difference. Currently, I’m
+                    focused on growing my skills and seeking an internship opportunity to further my
+                    career. When I’m not coding, I enjoy exploring new technologies and finding
+                    creative ways to solve challenges.
                 </div>
                 <div class="self-start pb-10">
                     <SocialsLink section="hero" />
@@ -59,7 +62,7 @@ onMounted(() => {
             repeat: -1,
             defaults: { ease: 'none', duration: 1 }
         })
-        titles.forEach((title, index) => {
+        titles.forEach((title) => {
             tl.to('.first-title', {
                 text: title.split(' ')[0]
             })
