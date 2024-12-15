@@ -17,28 +17,28 @@ import ProjectCard from '@/components/ProjectCard.vue'
 
 const projects = [
     {
-        title: 'Crypto Screener Application',
+        title: 'Foralink - Marketplace for software development agencies',
         description: `I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             when an unknown printer took a galley of type and scrambled it to specimen book.`,
-        imagePath: '/images/projects/project1.jpeg',
-        projectLink: 'https://www.example.com'
+        imagePath: '/images/projects/foralink.png',
+        projectLink: 'https://www.foralink.io/'
     },
     {
-        title: 'Euphoria - Ecommerce (Apparels) Website Template',
+        title: 'BringoExpress - Shipment Tracking Web Application System',
         description: `I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             when an unknown printer took a galley of type and scrambled it to specimen book.`,
-        imagePath: '/images/projects/project2.jpeg',
-        projectLink: 'https://www.example.com'
+        imagePath: '/images/projects/bringo.png',
+        projectLink: 'https://www.bringoexpress.com/'
     },
     {
-        title: 'Blog Website Template',
+        title: 'College Soccer Pathway - College Soccer Recruitment App',
         description: `I'm Evren Shah Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
             when an unknown printer took a galley of type and scrambled it to specimen book.`,
-        imagePath: '/images/projects/project3.jpeg',
-        projectLink: 'https://www.example.com'
+        imagePath: '/images/projects/csp.webp',
+        projectLink: 'https://www.collegesoccerpathway.com/'
     }
 ]
 </script>
