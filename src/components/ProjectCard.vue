@@ -1,13 +1,13 @@
 <template>
     <div class="grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-28 xl:items-center">
         <div
-            class="relative mx-auto w-full max-w-2xl overflow-hidden"
+            class="relative mx-auto flex w-full max-w-2xl justify-center overflow-hidden lg:block lg:justify-normal"
             :class="{ 'lg:order-last': alternate }"
             :ref="'projectImageContainer' + index"
         >
             <img
                 v-hover-animation
-                class="rounded-[19px] shadow-[0px_8px_18px_-6px_rgba(24,39,75,0.12),0px_12px_42px_-4px_rgba(24,39,75,0.12)]"
+                class="mx-auto block rounded-[19px] shadow-[0px_8px_18px_-6px_rgba(24,39,75,0.12),0px_12px_42px_-4px_rgba(24,39,75,0.12)]"
                 :src="imagePath"
                 :alt="`${title} project image`"
                 :ref="'projectImage' + index"
@@ -64,7 +64,7 @@ onMounted(() => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: container.value,
-            start: 'top 85%'
+            start: 'top 90%'
             // toggleActions: 'play none play reset'
         }
     })

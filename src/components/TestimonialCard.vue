@@ -6,13 +6,21 @@
         class="testimonial-card group flex flex-col items-center space-y-6 rounded-[20px] border p-6 text-center tracking-tight shadow-[0px_6px_8px_-6px_#18274B1F,0px_8px_16px_-6px_#18274B14] transition-colors hover:bg-black md:max-w-[370px] md:p-10"
     >
         <img
-            class="h-24 w-24"
-            :src="`/images/${gender === 'male' ? 'male' : 'female'}_testimonial.svg`"
+            class="h-24 w-24 rounded-full"
+            :src="
+                imagePath ||
+                `/images/testimonials/${gender === 'male' ? 'male' : 'female'}_testimonial.svg`
+            "
             alt="client image icon"
         />
-        <p class="text-base leading-5 tracking-wide text-neutral group-hover:text-white">
-            {{ testimonial }}
-        </p>
+
+        <div class="flex h-[150px] items-center">
+            <p
+                class="align-middle text-base leading-5 tracking-wide text-neutral group-hover:text-white"
+            >
+                {{ testimonial }}
+            </p>
+        </div>
         <svg height="3" viewBox="0 0 121 3" xmlns="http://www.w3.org/2000/svg">
             <rect
                 x="0.5"
@@ -37,6 +45,7 @@ defineProps({
     name: String,
     position: String,
     testimonial: String,
+    imagePath: String,
     link: String,
     index: Number,
     gender: {
