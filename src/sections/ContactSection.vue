@@ -1,5 +1,5 @@
 <template>
-    <div class="py-16">
+    <div class="overflow-hidden py-16">
         <h1 v-section-heading-animation class="section-heading">
             <span>Contact</span><span>Me</span>
         </h1>

@@ -1,6 +1,5 @@
 -   Offload static content to cdn
 -   add logo
 -   upload resume
--   Fix width issue of hero section changing text
 -   add seo tags
 -   Change animation fo about me section

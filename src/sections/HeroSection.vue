@@ -5,7 +5,7 @@
         >
             <div
                 ref="textContainer"
-                class="order-last flex basis-[55%] flex-col space-y-8 md:order-first md:my-14"
+                class="order-last flex basis-[55%] flex-col space-y-8 md:order-first md:my-14 lg:min-w-[470px]"
             >
                 <div
                     class="flex flex-col space-y-3 text-[28px] font-extrabold leading-8 tracking-tight lg:text-5xl lg:leading-[56px]"
@@ -14,7 +14,7 @@
                         <span class="font-normal">Hello I am</span>
                         <span>Aweroro A. Ayomide</span>
                     </div>
-                    <div class="space-x-3">
+                    <div class="inline-block max-w-[300px] space-x-3 text-nowrap lg:max-w-[2000px]">
                         <span class="first-title"></span>
                         <span class="text-outline second-title"></span>
                     </div>
