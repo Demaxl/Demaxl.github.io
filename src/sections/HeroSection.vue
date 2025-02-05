@@ -56,8 +56,8 @@ let ctx
 const titles = [
     'Software Engineer',
     'Fullstack Developer',
-    'Freelance Developer',
-    'First-class Student'
+    'Freelance Developer'
+    //'First-class Student'
 ]
 
 onMounted(() => {

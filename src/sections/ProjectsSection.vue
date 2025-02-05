@@ -16,12 +16,12 @@
 import ProjectCard from '@/components/ProjectCard.vue'
 
 const projects = [
-    {
-        title: 'Foralink - Marketplace for software development agencies',
-        description: `  Foralink is an innovative online marketplace designed to connect businesses with top software development agencies. This platform allows businesses to post their projects, while pre-vetted agencies can apply, ensuring a seamless outsourcing process. With a focus on quality and efficiency, Foralink bridges the gap between companies seeking expertise and agencies delivering exceptional results.`,
-        imagePath: '/images/projects/foralink.png',
-        projectLink: 'https://www.foralink.io/'
-    },
+    // {
+    //     title: 'Foralink - Marketplace for software development agencies',
+    //     description: `  Foralink is an innovative online marketplace designed to connect businesses with top software development agencies. This platform allows businesses to post their projects, while pre-vetted agencies can apply, ensuring a seamless outsourcing process. With a focus on quality and efficiency, Foralink bridges the gap between companies seeking expertise and agencies delivering exceptional results.`,
+    //     imagePath: '/images/projects/foralink.png',
+    //     projectLink: 'https://www.foralink.io/'
+    // },
     {
         title: 'BringoExpress - Shipment Tracking Web Application System',
         description: `I developed a custom web application for BringoExpress, a logistics and shipment company, to optimize its operations. The application enables seamless tracking of shipments, manages payments and inventory, automates SMS alerts, and facilitates invoice generation. This solution was tailored to meet the company’s needs, ensuring efficiency and a better customer experience.`,
