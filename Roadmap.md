@@ -1,4 +1,3 @@
 -   add logo
--   upload resume
 -   add seo tags
 -   Change animation fo about me section

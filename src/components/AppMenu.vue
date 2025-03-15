@@ -36,11 +36,13 @@
             </a>
             <div class="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
                 <!-- Resume button -->
-                <button
+                <a
+                    href="https://docs.google.com/document/d/1r6iJHPouGFtSZhUN6WbIu3MhmCmYtyzbxkJHOTt_Tzs/export?format=pdf"
                     data-tooltip-target="tooltip-resume-btn"
                     data-tooltip-placement="bottom"
-                    type="button"
+                    role="button"
                     class="group hidden rounded-lg bg-black p-3 text-white transition-colors hover:bg-neutral focus:border-2 focus:border-black focus:bg-white focus:text-black focus:outline-none md:flex lg:px-5 lg:py-4"
+                    download="Demaxl-Resume"
                 >
                     <span class="hidden lg:inline-block">Resume</span>
                     <svg
@@ -58,7 +60,7 @@
                             stroke-linejoin="round"
                         />
                     </svg>
-                </button>
+                </a>
                 <div
                     id="tooltip-bottom"
                     role="tooltip"
@@ -138,10 +140,12 @@
                         >
                     </li>
                     <li>
-                        <button
+                        <a
+                            href="https://docs.google.com/document/d/1r6iJHPouGFtSZhUN6WbIu3MhmCmYtyzbxkJHOTt_Tzs/export?format=pdf"
+                            download="Demaxl-Resume"
                             data-tooltip-target="tooltip-bottom"
                             data-tooltip-placement="bottom"
-                            type="button"
+                            role="button"
                             class="group block w-full rounded-lg bg-black p-3 pl-5 text-center text-white transition-colors hover:bg-neutral focus:border-2 focus:border-black focus:bg-white focus:text-black focus:outline-none md:hidden"
                         >
                             <span class="inline-block lg:hidden">Resume</span>
@@ -160,7 +164,7 @@
                                     stroke-linejoin="round"
                                 />
                             </svg>
-                        </button>
+                        </a>
                     </li>
                 </ul>
             </div>
