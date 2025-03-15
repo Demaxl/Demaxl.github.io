@@ -1,4 +1,3 @@
--   Offload static content to cdn
 -   add logo
 -   upload resume
 -   add seo tags

@@ -8,8 +8,9 @@
         <img
             class="h-24 w-24 rounded-full"
             :src="
-                imagePath ||
-                `/images/testimonials/${gender === 'male' ? 'male' : 'female'}_testimonial.svg`
+                'https://cdn.statically.io/gh/Demaxl/Demaxl.github.io/main/public' +
+                (imagePath ||
+                    `/images/testimonials/${gender === 'male' ? 'male' : 'female'}_testimonial.svg`)
             "
             alt="client image icon"
         />
