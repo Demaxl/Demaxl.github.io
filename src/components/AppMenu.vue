@@ -22,7 +22,7 @@
                     data-tooltip-placement="bottom"
                     role="button"
                     class="group hidden rounded-lg bg-black p-3 text-white transition-colors hover:bg-neutral focus:border-2 focus:border-black focus:bg-white focus:text-black focus:outline-none md:flex lg:px-5 lg:py-4"
-                    download="Demaxl-Resume"
+                    download="demaxil-Resume"
                 >
                     <span class="hidden lg:inline-block">Resume</span>
                     <svg
@@ -122,7 +122,7 @@
                     <li>
                         <a
                             href="https://docs.google.com/document/d/1r6iJHPouGFtSZhUN6WbIu3MhmCmYtyzbxkJHOTt_Tzs/export?format=pdf"
-                            download="Demaxl-Resume"
+                            download="demaxil-Resume"
                             data-tooltip-target="tooltip-bottom"
                             data-tooltip-placement="bottom"
                             role="button"
