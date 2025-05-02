@@ -16,12 +16,14 @@
 <script setup>
 import SkillCard from '@/components/SkillCard.vue'
 import { gsap } from 'gsap'
-import { onMounted, onUnmounted, useTemplateRef } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 
 const skills = []
 
 // Use import.meta.glob to load all SVGs from a directory
 const svgModules = import.meta.glob('@/assets/icons/skills/*.svg', { eager: true })
+
+console.log(svgModules)
 
 // Iterate over the imported files and store their name and component that
 // was rendered by vite-svg-loader
@@ -31,6 +33,29 @@ for (const path in svgModules) {
         svgComponent: svgModules[path].default // the component
     })
 }
+
+// Custom order of skills
+const order = [
+    'Python',
+    'Javascript',
+    'Django',
+    'Vue',
+    'Nuxt',
+    'Solidity',
+    'Foundry',
+    'Docker',
+    'Kubernetes'
+]
+
+skills.sort((a, b) => {
+    const indexA = order.indexOf(a.title)
+    const indexB = order.indexOf(b.title)
+
+    if (indexA === -1) return 1
+    if (indexB === -1) return -1
+
+    return indexA - indexB
+})
 
 let ctx
 onMounted(() => {
