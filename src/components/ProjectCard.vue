@@ -3,7 +3,7 @@
         <div
             class="relative mx-auto flex w-full max-w-2xl justify-center overflow-hidden lg:block lg:justify-normal"
             :class="{ 'lg:order-last': alternate }"
-            :ref="'projectImageContainer' + index"
+            :ref="`projectImageContainer${index}`"
         >
             <img
                 v-hover-animation
@@ -12,16 +12,16 @@
                     'https://cdn.statically.io/gh/Demaxl/Demaxl.github.io/main/public' + imagePath
                 "
                 :alt="`${title} project image`"
-                :ref="'projectImage' + index"
+                :ref="`projectImage${index}`"
             />
             <div
                 :class="{ 'origin-top': alternate }"
                 class="absolute inset-0 bg-black"
-                :ref="'mask' + index"
+                :ref="`mask${index}`"
             ></div>
         </div>
         <div
-            :ref="'textContainer' + index"
+            :ref="`textContainer${index}`"
             class="flex flex-col space-y-7 tracking-tight text-white"
         >
             <h3 class="text-2xl font-extrabold leading-7 lg:text-5xl lg:leading-[56px]">
@@ -57,10 +57,10 @@ const { index } = defineProps({
 
 const alternate = computed(() => index % 2 === 0)
 
-const image = useTemplateRef('projectImage' + index)
-const container = useTemplateRef('projectImageContainer' + index)
-const textContainer = useTemplateRef('textContainer' + index)
-const mask = useTemplateRef('mask' + index)
+const image = useTemplateRef(`projectImage${index}`)
+const container = useTemplateRef(`projectImageContainer${index}`)
+const textContainer = useTemplateRef(`textContainer${index}`)
+const mask = useTemplateRef(`mask${index}`)
 
 onMounted(() => {
     const tl = gsap.timeline({
@@ -81,14 +81,6 @@ onMounted(() => {
             duration: 1,
             ease: 'sine.out'
         })
-        // tl.set(mask.value, {
-        //     scaleY: 1,
-        //     transformOrigin: 'top'
-        // }).to(mask.value, {
-        //     scaleY: 0,
-        //     duration: 1.5,
-        //     ease: 'power2.inOut'
-        // })
     } else {
         tl.set(mask.value, {
             width: '100%',

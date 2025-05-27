@@ -17,6 +17,12 @@ import ProjectCard from '@/components/ProjectCard.vue'
 
 const projects = [
     {
+        title: 'Incognito - Anonymous Messaging Platform',
+        description: `I built Incognito, an anonymous messaging platform that lets registered users receive text, image, video, or voice messages from anyone—completely anonymously. The frontend was developed with Nuxt and deployed on Vercel, while the backend, powered by Django, runs on AWS EC2 with PostgreSQL (RDS), S3 for media storage, and CloudFront as a CDN. It uses Nginx to reverse proxy to Gunicorn, and a CI/CD pipeline to automate deployments. Incognito is designed for privacy and simplicity, enabling open communication without compromising user identity.`,
+        imagePath: '/images/projects/incognito/image1.png',
+        projectLink: 'https://www.incgt.xyz'
+    },
+    {
         title: 'BringoExpress - Shipment Tracking Web Application System',
         description: `I developed a custom web application for BringoExpress, a logistics and shipment company, to optimize its operations. The application enables seamless tracking of shipments, manages payments and inventory, automates SMS alerts, and facilitates invoice generation. This solution was tailored to meet the company’s needs, ensuring efficiency and a better customer experience.`,
         imagePath: '/images/projects/bringo.png',

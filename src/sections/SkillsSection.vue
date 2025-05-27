@@ -23,8 +23,6 @@ const skills = []
 // Use import.meta.glob to load all SVGs from a directory
 const svgModules = import.meta.glob('@/assets/icons/skills/*.svg', { eager: true })
 
-console.log(svgModules)
-
 // Iterate over the imported files and store their name and component that
 // was rendered by vite-svg-loader
 for (const path in svgModules) {
