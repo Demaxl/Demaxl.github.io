@@ -16,8 +16,8 @@
                     <p>
                         I am a passionate software engineer with a knack for solving problems
                         through innovative and efficient coding solutions. I am currently a
-                        first-class student at the University of Lagos, pursuing a Bachelor’s degree
-                        in Computer Science with an impressive CGPA of <strong>4.91/5.0</strong>,
+                        <strong>first-class</strong> student at the University of Lagos, pursuing a Bachelor’s degree
+                        in Computer Science with an impressive CGPA of <strong>4.68/5.0</strong>,
                         where I am continuously refining my expertise in software development and
                         technology. My mission is to create impactful digital experiences that
                         empower businesses and individuals to achieve their goals.

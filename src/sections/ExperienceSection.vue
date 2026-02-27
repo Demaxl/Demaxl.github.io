@@ -19,13 +19,6 @@ import ExperienceCard from '@/components/ExperienceCard.vue'
 
 const experiences = [
     {
-        title: 'Technical Lead at Vastuile (Fintech Startup)',
-        date: 'April 2025 - Present',
-        company: 'Vastuile',
-        description: `Leading the technical vision at Vastuile, I drive the development of a blockchain-powered payments platform for African people. I manage a high-performance engineering team, overseeing wallet infrastructure, microservices, DevOps pipelines, and code standards.`,
-        link: 'https://www.linkedin.com/in/demaxl/'
-    },
-    {
         title: 'Freelance Software Engineer',
         date: 'August 2021 - Present',
         company: 'Freelance',
