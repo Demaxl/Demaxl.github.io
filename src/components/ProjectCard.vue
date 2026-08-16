@@ -1,49 +1,39 @@
 <template>
-    <div class="grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-28 xl:items-center">
-        <div
-            class="relative mx-auto flex w-full max-w-2xl justify-center overflow-hidden lg:block lg:justify-normal"
-            :class="{ 'lg:order-last': alternate }"
-            :ref="`projectImageContainer${index}`"
-        >
-            <img
-                v-hover-animation
+    <div class="grid grid-cols-1 gap-7 lg:grid-cols-2 lg:gap-28 lg:items-center">
+        <div class="relative mx-auto flex w-full max-w-2xl justify-center overflow-hidden lg:block lg:justify-normal"
+            :class="{ 'lg:order-last': alternate }" :ref="`projectImageContainer${index}`">
+            <img v-hover-animation
                 class="mx-auto block rounded-[19px] shadow-[0px_8px_18px_-6px_rgba(24,39,75,0.12),0px_12px_42px_-4px_rgba(24,39,75,0.12)]"
-                :src="
-                    'https://cdn.statically.io/gh/Demaxl/Demaxl.github.io/main/public' + imagePath
-                "
-                :alt="`${title} project image`"
-                :ref="`projectImage${index}`"
-            />
-            <div
-                :class="{ 'origin-top': alternate }"
-                class="absolute inset-0 bg-black"
-                :ref="`mask${index}`"
-            ></div>
+                :src="imagePath" :alt="`${title} project image`" :ref="`projectImage${index}`" />
+            <div :class="{ 'origin-top': alternate }" class="absolute inset-0 bg-black" :ref="`mask${index}`"></div>
         </div>
-        <div
-            :ref="`textContainer${index}`"
-            class="flex flex-col space-y-7 tracking-tight text-white"
-        >
+        <div :ref="`textContainer${index}`" class="flex flex-col space-y-7 tracking-tight text-white">
             <h3 class="text-2xl font-extrabold leading-7 lg:text-5xl lg:leading-[56px]">
                 {{ index.toString().padStart(2, '0') }}
             </h3>
             <h2 class="text-xl font-bold leading-6 lg:text-[32px] lg:leading-10">
                 {{ title }}
             </h2>
-            <p class="font-normal tracking-wide text-zinc-400">
-                {{ description }}
+            <p class="font-normal tracking-wide text-zinc-400" v-html="description">
+
             </p>
-            <a :href="projectLink" target="_blank">
-                <ExportSVG
-                    class="h-5 w-5 cursor-pointer stroke-white stroke-2 transition-colors hover:stroke-neutral"
-                />
-            </a>
+            <div class="inline-flex">
+                <a type="button" :href="projectLink" target="_blank" :data-tooltip-target="`project-tooltip-${index}`">
+                    <ExportSVG
+                        class="h-5 w-5 cursor-pointer stroke-white stroke-2 transition-colors hover:stroke-neutral" />
+                    <VToolTip :id="`project-tooltip-${index}`" :content="`Visit project`"
+                        class="bg-white !text-black" />
+                </a>
+            </div>
+
+
         </div>
     </div>
 </template>
 
 <script setup>
 import ExportSVG from '@/assets/icons/export.svg'
+import VToolTip from '@/components/VToolTip.vue'
 import gsap from 'gsap'
 import { onMounted, useTemplateRef, computed } from 'vue'
 

@@ -1,15 +1,10 @@
 <template>
     <div class="flex justify-center">
-        <div
-            class="flex flex-col space-y-12 space-y-reverse md:flex-row md:items-center md:justify-center md:px-4"
-        >
-            <div
-                ref="textContainer"
-                class="order-last flex basis-[55%] flex-col space-y-8 md:order-first md:my-14 lg:min-w-[470px]"
-            >
+        <div class="flex flex-col space-y-12 space-y-reverse md:flex-row md:items-center md:justify-center md:px-4">
+            <div ref="textContainer"
+                class="order-last flex basis-[55%] flex-col space-y-8 md:order-first md:my-14 lg:min-w-[470px]">
                 <div
-                    class="flex flex-col space-y-3 text-[28px] font-extrabold leading-8 tracking-tight lg:text-5xl lg:leading-[56px]"
-                >
+                    class="flex flex-col space-y-3 text-[28px] font-extrabold leading-8 tracking-tight lg:text-5xl lg:leading-[56px]">
                     <div class="space-x-3">
                         <span class="font-normal">Hello I am</span>
                         <span>Aweroro A. Ayomide</span>
@@ -24,13 +19,16 @@
                     </div>
                 </div>
                 <div class="inline-block text-base tracking-wide text-zinc-500">
-                    I'm Aweroro Ayomide Abdullahi, a dedicated software developer based in Lagos,
-                    Nigeria. I specialize in web development, web scraping, and automation, with
-                    expertise in Python, Django, and Vue.js. I’m passionate about creating
-                    efficient, user-focused digital solutions that make a difference. Currently, I’m
-                    focused on growing my skills and seeking an internship opportunity to further my
-                    career. When I’m not coding, I enjoy exploring new technologies and finding
-                    creative ways to solve challenges.
+                    Hi, I'm Aweroro Ayomide Abdullahi.
+                    <br>
+                    I'm a software engineer from Lagos, Nigeria, specializing in <strong>Software Development,
+                        Automation, Smart
+                        Contract Development/Security and Web Scraping</strong>. I build reliable web applications,
+                    APIs
+                    and automation systems that solve problems for businesses and individuals.
+                    <br>
+                    I'm currently focused on building great products, taking on freelance projects, and exploring
+                    opportunities to work with teams remotely.
                 </div>
                 <div class="self-start pb-10">
                     <SocialsLink section="hero" />
@@ -38,8 +36,7 @@
             </div>
 
             <PersonIcon
-                class="mx-auto max-h-[330px] max-w-xl md:h-auto md:max-h-none md:min-w-[330px] md:grow md:self-center lg:min-w-[450px] 2xl:self-start"
-            />
+                class="mx-auto max-h-[330px] max-w-xl md:h-auto md:max-h-none md:min-w-[330px] md:grow md:self-center lg:min-w-[450px] 2xl:self-start" />
         </div>
     </div>
 </template>

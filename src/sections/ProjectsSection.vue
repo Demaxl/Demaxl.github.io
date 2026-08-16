@@ -18,9 +18,14 @@ import ProjectCard from '@/components/ProjectCard.vue'
 const projects = [
     {
         title: 'Incognito - Anonymous Messaging Platform',
-        description: `I built Incognito, an anonymous messaging platform that lets registered users receive text, image, video, or voice messages from anyone—completely anonymously. The frontend was developed with Nuxt and deployed on Vercel, while the backend, powered by Django, runs on AWS EC2 with PostgreSQL (RDS), S3 for media storage, and CloudFront as a CDN. It uses Nginx to reverse proxy to Gunicorn, and a CI/CD pipeline to automate deployments. Incognito is designed for privacy and simplicity, enabling open communication without compromising user identity.`,
+        description: `
+        I built Incognito, a full-stack anonymous messaging platform that allows users to receive text, image, video, and voice messages without revealing the sender’s identity.
+        <br>
+        Built with Nuxt, Django, PostgreSQL, and Cloudflare R2, with the frontend deployed on Vercel and backend on Render. I developed the platform end-to-end, including authentication, messaging, media uploads, APIs, and deployment.
+        <br>
+        Incognito is designed for privacy and simplicity, enabling open communication without compromising user identity.`,
         imagePath: '/images/projects/incognito/image1.png',
-        projectLink: 'https://www.incgt.xyz'
+        projectLink: 'https://www.incgto.xyz'
     },
     {
         title: 'BringoExpress - Shipment Tracking Web Application System',
@@ -35,6 +40,13 @@ const projects = [
             in understanding these algorithmic concepts through interactive visualization`,
         imagePath: '/images/projects/path_finder.gif',
         projectLink: 'https://github.com/Demaxl/Path-Finding-Visualiser'
+    },
+    {
+        title: 'Aegis - Decentralized Onchain Escrow System ',
+        description: `I built Aegis, a decentralized onchain escrow system that allows users to create, fund, and manage escrow agreements directly through their crypto wallets.
+        The platform combines smart contracts with a modern web interface, enabling trustless transactions without relying on a traditional intermediary. I built the application end-to-end, including the escrow workflow, wallet integration, and frontend.`,
+        imagePath: '/images/projects/aegis.png',
+        projectLink: 'https://aegis-escrow.vercel.app/'
     }
 ]
 </script>
