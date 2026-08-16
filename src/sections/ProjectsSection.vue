@@ -27,12 +27,12 @@ const projects = [
         imagePath: '/images/projects/incognito/image1.png',
         projectLink: 'https://www.incgto.xyz'
     },
-    {
-        title: 'BringoExpress - Shipment Tracking Web Application System',
-        description: `I developed a custom web application for BringoExpress, a logistics and shipment company, to optimize its operations. The application enables seamless tracking of shipments, manages payments and inventory, automates SMS alerts, and facilitates invoice generation. This solution was tailored to meet the company’s needs, ensuring efficiency and a better customer experience.`,
-        imagePath: '/images/projects/bringo.png',
-        projectLink: 'https://www.bringoexpress.com/'
-    },
+    // {
+    //     title: 'BringoExpress - Shipment Tracking Web Application System',
+    //     description: `I developed a custom web application for BringoExpress, a logistics and shipment company, to optimize its operations. The application enables seamless tracking of shipments, manages payments and inventory, automates SMS alerts, and facilitates invoice generation. This solution was tailored to meet the company’s needs, ensuring efficiency and a better customer experience.`,
+    //     imagePath: '/images/projects/bringo.png',
+    //     projectLink: 'https://www.bringoexpress.com/'
+    // },
     {
         title: 'Path Finding Algorithm Visualizer',
         description: `I developed an application showcasing various search algorithms' 
